@@ -14,37 +14,60 @@ NOTE: it is fine to place project files in either `src` or in the root `.` direc
 Files in the React.js project should be generally be structured as the following.
 
 ```
-├── README.md
-├── components
-│   ├── Fork.tsx
-│   ├── SearchBar.tsx
-│   ├── ...
-│   ├── common
-│   │   ├── Button.tsx
-│   │   ├── Card.tsx
-│   │   ├── List.tsx
-│   │   ├── Navbar.tsx
-│   │   └── Tile.tsx
-│   └── containers
-│       ├── SearchAndResults.tsx
-│       └── GistDetails.tsx
-├── lib
-│   └── globalStyles.ts
-├── package-lock.json
-├── package.json
-├── public
-│   ├── favicon.ico
-│   ├── fonts
-│   │   ├── Campton-Book.otf
-│   │   ├── ...
-│   ├── images
-│   │   ├── ...
-│   ├── logos
-│   │   ├── ...
-│   └── vectors
-│       ├── ...
-├── tsconfig.json
-└── yarn.lock
+- __Gist\-demo__
+   - [README.md](README.md)
+   - [node\_modules](node_modules)
+   - [package.json](package.json)
+   - __public__
+     - [favicon.ico]
+     - [index.html]
+     - [logo192.png]
+     - [logo512.png]
+     - [manifest.json]
+     - [robots.txt]
+   - __src__
+     - [App.js](src/App.js)
+     - [App.test.js](src/App.test.js)
+     - __app__
+       - __components__
+         - __avatar__
+           - [index.js](src/app/components/avatar/index.js)
+           - [styles.css](src/app/components/avatar/styles.css)
+         - __badge__
+           - [index.js](src/app/components/badge/index.js)
+           - [styles.css](src/app/components/badge/styles.css)
+         - __forks__
+           - [index.js](src/app/components/forks/index.js)
+         - __gistCard__
+           - [index.js](src/app/components/gistCard/index.js)
+           - [styles.css](src/app/components/gistCard/styles.css)
+         - __searchForm__
+           - [index.js](src/app/components/searchForm/index.js)
+         - __searchHeader__
+           - [index.js](src/app/components/searchHeader/index.js)
+           - [styles.css](src/app/components/searchHeader/styles.css)
+         - __searchResults__
+           - [index.js](src/app/components/searchResults/index.js)
+           - [styles.css](src/app/components/searchResults/styles.css)
+       - __config__
+         - [index.js](src/app/config/index.js)
+       - __containers__
+         - __gistDetails__
+           - [index.js](src/app/containers/gistDetails/index.js)
+           - [styles.css](src/app/containers/gistDetails/styles.css)
+         - __userGists__
+           - [index.js](src/app/containers/userGists/index.js)
+       - __network__
+         - [index.js](src/app/network/index.js)
+       - __store__
+         - [index.js](src/app/store/index.js)
+         - [store.js](src/app/store/store.js)
+     - [index.css](src/index.css)
+     - [index.js](src/index.js)
+     - [logo.svg](src/logo.svg)
+     - [reportWebVitals.js](src/reportWebVitals.js)
+     - [setupTests.js](src/setupTests.js)
+   - [yarn.lock](yarn.lock)
 ```
 ## Getting Started and Installing
 These instructions will help you running on your local machine for development and testing purposes.
