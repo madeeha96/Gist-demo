@@ -13,6 +13,7 @@ function SearchForm(props) {
 
   const fetchAllGists = async (username) => {
     try {
+      setGistsErr(null);
       setGistsLoading(true);
       const res = await fetchGetRequest(getAllGistUrl(username));
       if (res.length) {
