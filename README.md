@@ -69,3 +69,20 @@ $ npm start
 * to start the server.
 * open (http://localhost:3000) in your browser. 
 
+## Implementation Plan 
+1-) Break down functionality, one page would be list of gists of that user.
+2-) Second page would be gist details, including recent users fork.
+3-) This would include routing as well navigating to single gist screen from listing.
+4-) From search bar results, we will fetch gists listing store can be used to save all gists,
+so that we can propagate it into results component.
+5-) Used jsDocs to provide better visibility on network and config calls.
+6-) Zustand being used as store management tool, which is based on hooks with minimal boilerplate code as compared to redux
+7-) App structure breakdown into reusable components, containers (with routes), store, network and config folder.
+
+### Enhancements (Nice to have)
+8-) Api calls can be written with in hooks communicating to store if same functionality being used more than one time (ENHANCEMENT)
+9-) When loading a list we can use card skeletons to provide better UX (https://www.npmjs.com/package/react-loading-skeleton) (ENHANCEMENT)
+10-) Listing api call can be cached when searching frequent used terms would take items from cache instead of api call. This would decrease load time (ENHANCEMENT) LRU/MRU approach
+11-) axios-hooks library can be used which is based on hooks and gives us default error and loading state instead of declaring it via useStates (ENHANCEMENT) https://www.npmjs.com/package/axios-hooks
+12-) Unit test cases can be added via Jest. Also snapshots tests for UI. (ENHANCEMENT)
+13-) Error logging can be done on FE. Incase of any downtime, error can be logged into any analytics tool. (ENHANCEMENT)
