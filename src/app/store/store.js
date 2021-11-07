@@ -1,10 +1,16 @@
 import create from "zustand";
 
-// zustand store based on hooks
+// zustand store
 export default create((set) => ({
   gists: [],
   setGists: (item) => set(() => ({ gists: item })),
 
-  gist: {},
-  setCart: (item) => set(() => ({ gist: item })),
+  gistsLoading: false,
+  setGistsLoading: (loading) => set(() => ({ gistsLoading: loading })),
+
+  gistsErr: null,
+  setGistsErr: (err) => set(() => ({ gistsErr: err })),
+
+  username: null,
+  setUsername: (item) => set(() => ({ username: item })),
 }));
